@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 #--------------------------Database Connection-----------------------#
-#We basically copy paste this
 
 # postgresql://<username>:<password>@<host>/<database>
 SQLALCHEMY_DATABASE_URL = "postgresql+psycopg2://postgres:yugal@localhost/fastapi-learn"
