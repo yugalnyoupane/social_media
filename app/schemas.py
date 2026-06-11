@@ -3,7 +3,6 @@ from datetime import datetime
 from typing import Optional
 
 
-
 # -------------------- Schema --------------------
     
 class PostBase(BaseModel):
@@ -13,22 +12,24 @@ class PostBase(BaseModel):
 
 class PostCreate(PostBase):
     pass
-    
+
+class UserOut(BaseModel):
+    id:int
+    email:EmailStr
+    class Config:
+        from_attributes = True 
+
 class Post(PostBase):
     id:int
     created_at: datetime
+    owner_id:int
+    owner:UserOut
     class Config:
         from_attributes = True
 
 class UserCreate(BaseModel):
     email:EmailStr
     password:str
-
-class UserOut(BaseModel):
-    id:int
-    email:EmailStr
-    class Config:
-        from_attributes = True
 
 class UserLogin(BaseModel):
     email:EmailStr
