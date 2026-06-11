@@ -4,7 +4,9 @@ from typing import Optional
 
 
 # -------------------- Schema --------------------
-    
+#it is like the layer between the req, response and the API, only required information if we need to pass or want we use it make class
+#the magic is possible due to pydantic
+
 class PostBase(BaseModel):
     title: str
     content: str

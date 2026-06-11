@@ -1,9 +1,13 @@
+#so basically ORM means kinda like the interface between the database and the backend, that 
+#helps us create our own database table using class 
+
+#self explanatory
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
 from sqlalchemy.orm import relationship
 
-from .database import Base
+from .database import Base #this is the fundamnetal base class we mentioned in the database.py
 
 #-------------- TO CREATE DATABASE (USING ORM)--------------------------------#
 class Post(Base):

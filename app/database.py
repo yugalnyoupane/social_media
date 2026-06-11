@@ -21,6 +21,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base() #base class is the foundation class to build all the table
 
 
+#get_db() is called according to the use
 def get_db():
     db = SessionLocal()
     try:
